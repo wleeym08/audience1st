@@ -60,6 +60,7 @@
     position: relative;
 }
 .seatCharts-container {
+    clear: both;
     position: absolute;
     top: 0;
     left: 0;
@@ -75,6 +76,7 @@ img.seating-charts-overlay {
     z-index: 1;
     pointer-events: none;
 }
+
 div.seatCharts-cell {
     display: inline-block;
     height: 20px;
@@ -89,14 +91,33 @@ div.seatCharts-row {
 /* Legend */
 
 .seatCharts-legendList {
+    height: 4em;
     list-style: none;
     padding-inline-start: 0;
     padding-left: 0;
     margin-left: 4ex;           /* should match value for .seat-select-cancel */
 }
-
+.seatCharts-legendItem {
+    float: left;
+    padding-right: 1ex;
+}
 /* Cancel button */
 
 .seat-select-cancel {
     margin-left: 4ex;
+    float: left;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    div.seatCharts-cell {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin: 1px;
+    }
+    div.seatCharts-row {
+        height: 42px;
+        width: auto;
+    }
 }

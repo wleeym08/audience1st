@@ -18,8 +18,6 @@ A1.seatmap = {
         ['r', 'available', 'Available seat'],
         ['a', 'available', 'Available accessible seat'],
         ['r', 'unavailable', 'Unavailable seat'],
-        ['r', 'selected', 'Seat you have selected'],
-        ['a', 'selected', 'Accessible seat you have selected']
       ]
     }
     ,click: function(evt) {
@@ -102,6 +100,7 @@ A1.seatmap = {
     var seatmapId = $(this).data('seatmap-id');
     A1.seatmap.configureFrom(A1.seatmaps[seatmapId]);
     A1.seatmap.max = 0;         // don't allow seat selection
+    A1.seatmap.settings.legend.node = $('#seating-charts-wrapper .seating-charts-legend');
     A1.seatmap.seats = $('#seatmap').seatCharts(A1.seatmap.settings);
     $('#seating-charts-wrapper').removeClass('d-none').slideDown();
     A1.seatmap.setupMap("passive");
