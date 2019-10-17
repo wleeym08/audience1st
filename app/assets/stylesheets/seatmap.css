@@ -59,6 +59,10 @@
     border: 1px solid black;
     position: relative;
 }
+.map-container {
+    position: relative;
+}
+
 .seatCharts-container {
     clear: both;
     position: absolute;
@@ -90,34 +94,50 @@ div.seatCharts-row {
 
 /* Legend */
 
+.legend-container {
+    width: 100%;
+    font-size: smaller;
+    height: 24px;
+    border-bottom: 1px solid grey;
+}
+/* Cancel button */
+.seat-select-cancel {
+    margin-left: 4ex;
+    float: left;
+}
+
 .seatCharts-legendList {
-    height: 4em;
+    display: inline;
     list-style: none;
     padding-inline-start: 0;
     padding-left: 0;
     margin-left: 4ex;           /* should match value for .seat-select-cancel */
 }
 .seatCharts-legendItem {
-    float: left;
-    padding-right: 1ex;
-}
-/* Cancel button */
-
-.seat-select-cancel {
-    margin-left: 4ex;
-    float: left;
+    display: inline;
+    padding-right: 4px;
 }
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
     div.seatCharts-cell {
         display: inline-block;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         margin: 1px;
     }
     div.seatCharts-row {
-        height: 42px;
+        height: 32px;
         width: auto;
+    }
+    .legend-container {
+        height: 40px;
+    }
+    .seatCharts-legendItem {
+        font-size: 200%;
+    }
+    .seat-select-cancel {
+        font-size: 150%;
+        margin: 2px;
     }
 }

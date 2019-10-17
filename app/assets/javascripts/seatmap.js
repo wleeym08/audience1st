@@ -15,9 +15,9 @@ A1.seatmap = {
     ,naming: { top: false, left: false }
     ,legend: {          // can't set statically above, since relies on character keys in items hash to be defined as local vars - ugh
       items: [
-        ['r', 'available', 'Available seat'],
-        ['a', 'available', 'Available accessible seat'],
-        ['r', 'unavailable', 'Unavailable seat'],
+        ['r', 'available', 'Available'],
+        ['a', 'available', 'Available accessible'],
+        ['r', 'unavailable', 'Unavailable'],
       ]
     }
     ,click: function(evt) {
@@ -177,7 +177,7 @@ A1.seatmap = {
     var left = ($('#seating-charts-wrapper').width() - mapWidth) / 2;
     $('#seating-charts-wrapper img.seating-charts-overlay').css({"left": left, "width": mapWidth});
     $('#seatmap').css({"left": left});
-    $('#seating-charts-wrapper').height($('#seatmap').height());
+    $('#seating-charts-wrapper .map-container').height($('#seatmap').height());
   }
   // triggered whenever showdate dropdown menu changes
   ,getSeatingOptionsForSubscriberReservation: function() {
